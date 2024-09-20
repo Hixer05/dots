@@ -84,6 +84,9 @@ current-theme
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+;; Get a specific config
+(load-file "./default-config.el")
+
 (setq org-roam-directory (file-truename "~/org/roam"))
 (after! org
   (setq org-capture-templates
@@ -115,5 +118,5 @@ current-theme
   (org-roam-db-autosync-mode))
 
 (after! org
-  (setq org-format-latex-options (plist-put org-format-latex-options ':scale 1.5))
-  (setq org-format-latex-options (plist-put org-format-latex-options ':html-scale 1.5)))
+  (setq org-format-latex-options (plist-put org-format-latex-options ':scale latex-scale))
+  (setq org-format-latex-options (plist-put org-format-latex-options ':html-scale latex-scale)))
