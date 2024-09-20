@@ -14,14 +14,14 @@ if ! [[ "${hostnames[@]}" =~ "$1" ]]; then
     exit
 fi
 
-if [ -L ./doom/default-config.el ]; then
+if [ -L ./doom/default-config.el ] || [ -e ./doom/default-config.el ]; then
     rm ./doom/default-config.el
 fi
 
 if [ "$1" == "${hostnames[0]}" ]; then
-    ln -s ./doom/thinkpad-config.el ./doom/default-config.el
+    ln ./doom/thinkpad-config.el ./doom/default-config.el
 elif [ "$1" == "${hostnames[1]}" ]; then
-    ln -s ./doom/main-config.el ./doom/default-config.el
+    ln ./doom/main-config.el ./doom/default-config.el
 fi
 
 if ! [ -e ../.zshrc ] || [ -L ../.zshrc ]; then
