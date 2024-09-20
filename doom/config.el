@@ -85,7 +85,7 @@ current-theme
 ;; they are implemented.
 
 ;; Get a specific config
-(load-file "./default-config.el")
+(load-file "~/.config/doom/default-config.el")
 
 (setq org-roam-directory (file-truename "~/org/roam"))
 (after! org
