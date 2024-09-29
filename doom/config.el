@@ -32,7 +32,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(defvar current-theme 'doom-ayu-dark)
+(load-file "~/.config/doom/default-config.el")
 (setq doom-theme current-theme)
 (custom-theme-set-faces!
 current-theme
@@ -85,7 +85,6 @@ current-theme
 ;; they are implemented.
 
 ;; Get a specific config
-(load-file "~/.config/doom/default-config.el")
 
 (setq org-roam-directory (file-truename "~/org/roam"))
 (after! org
