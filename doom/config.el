@@ -119,7 +119,8 @@ current-theme
 
 (after! org
   (setq org-format-latex-options (plist-put org-format-latex-options ':scale latex-scale))
-  (setq org-format-latex-options (plist-put org-format-latex-options ':html-scale latex-scale)))
+  (setq org-format-latex-options (plist-put org-format-latex-options ':html-scale latex-scale))
+  (setq org-startup-with-latex-preview t))
 
 (after! elfeed
   (setq elfeed-feeds
