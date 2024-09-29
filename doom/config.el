@@ -120,3 +120,11 @@ current-theme
 (after! org
   (setq org-format-latex-options (plist-put org-format-latex-options ':scale latex-scale))
   (setq org-format-latex-options (plist-put org-format-latex-options ':html-scale latex-scale)))
+
+(after! elfeed
+  (setq elfeed-feeds
+        '(("https://www.phoronix.com/rss.php" linux)
+        ("https://openrss.org/reddit.com/r/art" reddit art)
+        ("https://www.ilpost.it/feed" news))))
+
+(setq confirm-kill-emacs nil)
