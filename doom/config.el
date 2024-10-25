@@ -130,3 +130,6 @@ current-theme
         ("https://www.ilpost.it/feed" news))))
 
 (setq confirm-kill-emacs nil)
+
+(after! evil
+  (setq evil-want-minibuffer :true))
