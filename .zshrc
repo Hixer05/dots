@@ -71,6 +71,7 @@ ZSH_THEME="half-life" # set by `omz`
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git
+	 zsh-vi-mode
          zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
