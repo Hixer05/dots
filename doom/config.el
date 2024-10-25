@@ -119,7 +119,9 @@ current-theme
 (after! org
   (setq org-format-latex-options (plist-put org-format-latex-options ':scale latex-scale))
   (setq org-format-latex-options (plist-put org-format-latex-options ':html-scale latex-scale))
-  (setq org-startup-with-latex-preview t))
+  (setq org-startup-with-latex-preview t)
+  (add-to-list 'org-latex-packages-alist '("" "ebproof" t))
+  (add-to-list 'org-latex-packages-alist '("" "amssymb" t)))
 
 (after! elfeed
   (setq elfeed-feeds
